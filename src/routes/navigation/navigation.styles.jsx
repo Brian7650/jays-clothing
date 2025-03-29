@@ -7,7 +7,7 @@ export const NavigationContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
-  background-color: skyblue;
+  background-color: white;
   color: white;
 `;
 
