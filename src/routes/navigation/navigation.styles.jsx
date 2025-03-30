@@ -8,7 +8,9 @@ export const NavigationContainer = styled.div`
   justify-content: space-between;
   margin-bottom: 25px;
   background-color: white;
-  color: white;
+  color: black;
+  padding: 10px;
+  padding-bottom: 15px;
 `;
 
 export const LogoContainer = styled(Link)`

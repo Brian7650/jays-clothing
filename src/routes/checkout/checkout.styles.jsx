@@ -7,6 +7,7 @@ export const CheckoutContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 50px auto 0;
+  font-size: 12px;
 `;
 
 export const CheckoutHeader = styled.div`
