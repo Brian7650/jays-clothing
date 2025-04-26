@@ -1,23 +1,22 @@
-import { StrictMode } from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.scss';
-import App from './App.jsx';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-import { UserProvider } from './contexts/user.context'; // Correct import path
-import { CategoriesProvider } from './contexts/categories.context'; // Correct import path
-import { CartProvider } from './contexts/cart.context'; // Correct import path
+import App from './App';
+import { store } from './store/store';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <BrowserRouter>
-      <UserProvider>
-        <CategoriesProvider>
-          <CartProvider>
-            <App />
-          </CartProvider>
-        </CategoriesProvider>
-      </UserProvider>
-    </BrowserRouter>
-  </StrictMode>
+import './index.scss';
+
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
+
+root.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
+  </React.StrictMode>
 );
