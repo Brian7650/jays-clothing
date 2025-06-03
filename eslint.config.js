@@ -1,11 +1,14 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import react from 'eslint-plugin-react'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
+import js from '@eslint/js';
+import globals from 'globals';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
+  // Ignore build outputs
   { ignores: ['dist'] },
+
+  // 👇 React frontend config
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -35,4 +38,17 @@ export default [
       ],
     },
   },
-]
+
+  // ✅ Node.js serverless functions (like Netlify)
+  {
+    files: ['netlify/functions/**/*.js'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'script', // CommonJS uses 'script', not 'module'
+      globals: globals.node,
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+    },
+  },
+];

@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [
     react(),
     svgr({
-      // Recommended configuration:
       svgrOptions: {
         exportType: 'named',
         namedExport: 'ReactComponent',
@@ -17,4 +16,6 @@ export default defineConfig({
       include: "**/*.svg",
     }),
   ],
+  envPrefix: 'VITE_', // ✅ Keep this
 });
+ 
