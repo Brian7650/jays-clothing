@@ -1,5 +1,6 @@
 // store.js
 import { rootReducer } from './root-reducer';
+import { rootSaga } from './root-saga';
 import { compose, createStore, applyMiddleware } from 'redux';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
@@ -10,15 +11,11 @@ const sagaMiddleware = createSagaMiddleware();
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['cart'],
+  whitelist: ['cart'], // only persist cart
 };
 
-const persistedReducer = persistReducer(
-  persistConfig, 
-  rootReducer
-);
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-// Custom logger that filters persist actions
 const customLogger = (store) => (next) => (action) => {
   if (!action.type.startsWith('persist/')) {
     console.group(action.type);
@@ -37,14 +34,15 @@ const middleWares = [
   sagaMiddleware,
 ].filter(Boolean);
 
-const composeEnhancer = 
-  (import.meta.env.DEV && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || 
-  compose;
+const composeEnhancer =
+  (import.meta.env.DEV && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 
 export const store = createStore(
   persistedReducer,
   undefined,
   composeEnhancer(applyMiddleware(...middleWares))
 );
+
+sagaMiddleware.run(rootSaga); // ✅ Run your sagas
 
 export const persistor = persistStore(store);
