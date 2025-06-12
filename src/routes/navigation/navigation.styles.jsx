@@ -15,12 +15,14 @@ export const NavigationContainer = styled.div`
 
 export const LogoContainer = styled(Link)`
   height: 50%;
-  width: 70px;
+  width: 90px;
   padding: 25px;
   padding-top: 100;
-  img {
-    max-width: 250%;
 
+  svg {
+    width: 100%;
+    height: auto;
+    max-width: 250%;
   }
 `;
 

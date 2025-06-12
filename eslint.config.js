@@ -51,4 +51,9 @@ export default [
       ...js.configs.recommended.rules,
     },
   },
+  {
+  "globals": {
+    "process": "readonly"
+  }
+}
 ];
