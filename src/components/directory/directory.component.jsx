@@ -6,31 +6,31 @@ const categories = [
   {
     id: 1,
     title: 'hats',
-    imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+    imageUrl: 'https://res.cloudinary.com/ddm8ggiyi/image/upload/v1750800528/Jays%20E-Commerce%20Data%20lite/front_page-greenhats_ofpfec.webp',
     route: 'shop/hats',
   },
   {
     id: 2,
     title: 'jackets',
-    imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+    imageUrl: 'https://res.cloudinary.com/ddm8ggiyi/image/upload/v1750800529/Jays%20E-Commerce%20Data%20lite/front_page-jackets_kkzgkx.webp',
     route: 'shop/jackets',
   },
   {
     id: 3,
     title: 'sneakers',
-    imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+    imageUrl: 'https://res.cloudinary.com/ddm8ggiyi/image/upload/v1750800532/Jays%20E-Commerce%20Data%20lite/front_page-shoes_nzy4ns.webp',
     route: 'shop/sneakers',
   },
   {
     id: 4,
     title: 'womens',
-    imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+    imageUrl: 'https://res.cloudinary.com/ddm8ggiyi/image/upload/v1750800533/Jays%20E-Commerce%20Data%20lite/front_page-women-1_eiaawt.webp',
     route: 'shop/womens',
   },
   {
     id: 5,
     title: 'mens',
-    imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+    imageUrl: 'https://res.cloudinary.com/ddm8ggiyi/image/upload/v1750800530/Jays%20E-Commerce%20Data%20lite/front_page-shirt-men_h7s35e.webp',
     route: 'shop/mens',
   },
 ];

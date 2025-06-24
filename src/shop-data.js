@@ -56,6 +56,30 @@ const SHOP_DATA = [
           imageUrl: 'https://i.ibb.co/X2VJP2W/blue-snapback.png',
           price: 16,
         },
+         {
+          id: 36,
+          name: 'Adidas Wool Beanie',
+          imageUrl: 'https://res.cloudinary.com/ddm8ggiyi/image/upload/v1750800541/Jays%20E-Commerce%20Data%20lite/Hats/wool-hat_lq3lz2.webp',
+          price: 22,
+        },
+        {
+          id: 37,
+          name: 'Brown Dressing Hat ',
+          imageUrl: 'https://res.cloudinary.com/ddm8ggiyi/image/upload/v1750800537/Jays%20E-Commerce%20Data%20lite/Hats/brown-hat_msprmj.webp',
+          price: 24,
+        },
+        {
+          id: 38,
+          name: 'Beanies',
+          imageUrl: 'https://res.cloudinary.com/ddm8ggiyi/image/upload/v1750800536/Jays%20E-Commerce%20Data%20lite/Hats/beanies_hekohd.webp',
+          price: 30,
+        },
+        {
+          id: 39,
+          name: 'Champion Hat',
+          imageUrl: 'https://res.cloudinary.com/ddm8ggiyi/image/upload/v1750800538/Jays%20E-Commerce%20Data%20lite/Hats/cap-hat_xrky8b.webp',
+          price: 35,
+        },
       ],
     },
     {
